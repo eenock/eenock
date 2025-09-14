@@ -12,7 +12,7 @@
 - 🔬 **Data Science & Analytics**
 
 ## Current Focus
-🌱 Pursuing my Bachelor's degree in Computer Science and Technology  
+🌱 Pursuing my Master's degree in Computer Science and Technology  
 💡 Building projects that combine AI with real-world applications  
 📚 Constantly learning and improving my Python skills
 
