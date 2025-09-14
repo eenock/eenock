@@ -1,16 +1,42 @@
-- 👋 Hi, I’m @eenock
-- 👀 I’m interested in AI, machine learning, Computer vision, web development plus sunrises and sun sets...LOL
-- 🌱 I’m currently learning a bachelor's degree in computer science and technology at University of Electronic Science and Technology of China.
-- 💞️ I’m looking to collaborate on any python related projects because am a big fan of python and working hard to become better and better at it.
-- 📫 How to reach me ...hit me up on:-
-                                      - WhatsApp +256752088970 
-                                      - WeChat Erinix17 
-                                      - Facebook Emuye Enock
-                                      - LinkedIn Emuye Enock 
-                                      Thank you.)))  
+# Hi there, I'm Enock! 👋
 
-<!---
-eenock/eenock is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+## About Me
+🎓 **Computer Science Student** at University of Electronic Science and Technology of China  
+🐍 **Python Enthusiast** passionate about clean, efficient code  
+🌅 **Sunset & Sunrise Appreciator** (because good code deserves good vibes!)
 
+## What I'm Into
+- 🤖 **Artificial Intelligence & Machine Learning**
+- 👁️ **Computer Vision**
+- 🌐 **Web Development**
+- 🔬 **Data Science & Analytics**
+
+## Current Focus
+🌱 Pursuing my Bachelor's degree in Computer Science and Technology  
+💡 Building projects that combine AI with real-world applications  
+📚 Constantly learning and improving my Python skills
+
+## Tech Stack & Skills
+**Languages:** Python, JavaScript, TypeScript  
+**Frontend:** Next.js, React, HTML/CSS  
+**Backend:** Node.js, Django, Flask  
+**Database:** MongoDB, Prisma ORM  
+**Security:** Cybersecurity principles, secure coding practices  
+**AI/ML:** Machine Learning, Computer Vision
+
+## Let's Collaborate!
+I'm always excited to work on projects involving:
+- 🔒 **Cybersecurity applications** and security research
+- 🤖 **AI/ML projects** with real-world impact
+- 🌐 **Full-stack web applications** (Python, JavaScript, TypeScript)
+- 👁️ **Computer Vision** solutions
+- 🛡️ **Secure software development** practices
+
+## Connect With Me
+📱 **WhatsApp:** +256752088970  
+💬 **WeChat:** Erinix17  
+📘 **Facebook:** Emuye Enock  
+💼 **LinkedIn:** [Emuye Enock](https://linkedin.com/in/emuye-enock)
+
+---
+*"Code is like humor. When you have to explain it, it's bad."* 🐍✨
