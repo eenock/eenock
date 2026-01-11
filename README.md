@@ -38,7 +38,7 @@
 Here are some projects I'm proud of:
 
 - **Mindful-journal**  
-  Classic arcade game built with Python (likely Pygame). Fun intro to game development and event handling.  
+  Classic minimal journal web app built with Nextjs, Typescript. Fun intro to my love for writing my feelings and about my day.  
   [View Repo](https://github.com/eenock/Mindful-Journal)
 
 - **Tic-Tac**  
