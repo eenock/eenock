@@ -35,11 +35,11 @@
 
 ## 🚀 Featured Projects
 
-Here are some projects I'm proud of (pin them on your profile!):
+Here are some projects I'm proud of:
 
-- **Space-Invaders**  
+- **Mindful-journal**  
   Classic arcade game built with Python (likely Pygame). Fun intro to game development and event handling.  
-  [View Repo](https://github.com/eenock/Space-Invaders)
+  [View Repo](https://github.com/eenock/Mindful-Journal)
 
 - **Tic-Tac**  
   Tic-Tac-Toe game implementation – great for logic, UI, and AI basics.  
