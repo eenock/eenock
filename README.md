@@ -123,16 +123,28 @@ Classic checkers game with a clean implementation.
 
 <div align="center">
 
-<img height="165em" src="https://github-readme-stats.vercel.app/api?username=eenock&show_icons=true&hide_border=true&hide_title=true&count_private=true&bg_color=0D1117&icon_color=0A66C2&text_color=C9D1D9&title_color=0A66C2" alt="GitHub Stats" />
-<img height="165em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=eenock&layout=compact&hide_border=true&hide_title=true&bg_color=0D1117&icon_color=0A66C2&text_color=C9D1D9&title_color=0A66C2" alt="Top Languages" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=eenock&show_icons=true&hide_border=true&hide_title=true&count_private=true&bg_color=0D1117&icon_color=0A66C2&text_color=C9D1D9&title_color=0A66C2" />
+  <img height="165em" src="https://github-readme-stats.vercel.app/api?username=eenock&show_icons=true&hide_border=true&hide_title=true&count_private=true&bg_color=FFFFFF&icon_color=0A66C2&text_color=24292F&title_color=0A66C2" alt="GitHub Stats" />
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=eenock&layout=compact&hide_border=true&hide_title=true&bg_color=0D1117&icon_color=0A66C2&text_color=C9D1D9&title_color=0A66C2" />
+  <img height="165em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=eenock&layout=compact&hide_border=true&hide_title=true&bg_color=FFFFFF&icon_color=0A66C2&text_color=24292F&title_color=0A66C2" alt="Top Languages" />
+</picture>
 
 <br>
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=eenock&hide_border=true&background=0D1117&border=30363D&stroke=30363D&ring=0A66C2&fire=0A66C2&currStreakNum=C9D1D9&sideNums=C9D1D9&currStreakLabel=0A66C2&sideLabels=8B949E&dates=8B949E" alt="GitHub Streak" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=eenock&hide_border=true&background=0D1117&border=30363D&stroke=30363D&ring=0A66C2&fire=0A66C2&currStreakNum=C9D1D9&sideNums=C9D1D9&currStreakLabel=0A66C2&sideLabels=8B949E&dates=8B949E" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=eenock&hide_border=true&background=FFFFFF&border=D0D7DE&stroke=D0D7DE&ring=0A66C2&fire=0A66C2&currStreakNum=24292F&sideNums=24292F&currStreakLabel=0A66C2&sideLabels=57606A&dates=57606A" alt="GitHub Streak" />
+</picture>
 
 <br>
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=eenock&bg_color=0D1117&color=C9D1D9&line=0A66C2&point=0A66C2&hide_border=true" alt="Contribution Graph" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=eenock&bg_color=0D1117&color=C9D1D9&line=0A66C2&point=0A66C2&hide_border=true" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=eenock&bg_color=FFFFFF&color=24292F&line=0A66C2&point=0A66C2&hide_border=true" alt="Contribution Graph" />
+</picture>
 
 </div>
 
