@@ -123,16 +123,16 @@ Classic checkers game with a clean implementation.
 
 <div align="center">
 
-<img height="165em" src="https://github-readme-stats.vercel.app/api?username=eenock&show_icons=true&theme=default&hide_border=true&hide_title=true&count_private=true&icon_color=0A66C2&text_color=333333&title_color=0A66C2" alt="GitHub Stats" />
-<img height="165em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=eenock&layout=compact&theme=default&hide_border=true&hide_title=true&icon_color=0A66C2&text_color=333333&title_color=0A66C2" alt="Top Languages" />
+<img height="165em" src="https://github-readme-stats.vercel.app/api?username=eenock&show_icons=true&hide_border=true&hide_title=true&count_private=true&bg_color=0D1117&icon_color=0A66C2&text_color=C9D1D9&title_color=0A66C2" alt="GitHub Stats" />
+<img height="165em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=eenock&layout=compact&hide_border=true&hide_title=true&bg_color=0D1117&icon_color=0A66C2&text_color=C9D1D9&title_color=0A66C2" alt="Top Languages" />
 
 <br>
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=eenock&theme=default&hide_border=true&background=FFFFFF00&ring=0A66C2&fire=0A66C2&currStreakLabel=333333" alt="GitHub Streak" />
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=eenock&hide_border=true&background=0D1117&border=30363D&stroke=30363D&ring=0A66C2&fire=0A66C2&currStreakNum=C9D1D9&sideNums=C9D1D9&currStreakLabel=0A66C2&sideLabels=8B949E&dates=8B949E" alt="GitHub Streak" />
 
 <br>
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=eenock&theme=minimal&hide_border=true&color=333333&line=0A66C2&point=0A66C2" alt="Contribution Graph" />
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=eenock&bg_color=0D1117&color=C9D1D9&line=0A66C2&point=0A66C2&hide_border=true" alt="Contribution Graph" />
 
 </div>
 
