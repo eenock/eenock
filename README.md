@@ -1,6 +1,6 @@
 <div align="center">
 
-# Enock Emuye
+# Eringata Enock Emuye
 
 ### Cybersecurity Researcher • Federated Learning Security • Full-Stack Engineer
 
@@ -115,7 +115,7 @@ Production-grade multi-level feedback queue scheduling simulator with dynamic pr
 ### Languages
 
 <p>
-<img src="https://skillicons.dev/icons?i=python,typescript,javascript,java,cpp" />
+<img src="https://skillicons.dev/icons?i=python,typescript,javascript" />
 </p>
 
 ### Frameworks & Tools
@@ -130,13 +130,13 @@ Production-grade multi-level feedback queue scheduling simulator with dynamic pr
 
 <div align="center">
 
-<img height="170em" src="https://github-readme-stats.vercel.app/api?username=eenock&show_icons=true&hide_border=true&count_private=true&include_all_commits=true" />
+<img height="170em" src="https://github-readme-stats.vercel.app/api?username=eenock&show_icons=true&hide_border=true&theme=dark" />
 
-<img height="170em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=eenock&layout=compact&hide_border=true" />
+<img height="170em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=eenock&layout=compact&hide_border=true&theme=dark" />
 
 <br>
 
-<img src="https://streak-stats.demolab.com?user=eenock&hide_border=true" />
+<img src="https://streak-stats.demolab.com?user=eenock&hide_border=true&theme=dark" />
 
 </div>
 
