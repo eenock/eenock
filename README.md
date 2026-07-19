@@ -21,6 +21,10 @@ University of Electronic Science and Technology of China (UESTC), Chengdu 🇨�
   <img src="https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white" />
 </a>
 
+<br><br>
+
+<img src="https://komarev.com/ghpvc/?username=eenock&label=Profile%20Views&color=0A66C2&style=flat" alt="Profile Views" />
+
 </div>
 
 ---
@@ -137,6 +141,20 @@ Production-grade multi-level feedback queue scheduling simulator with dynamic pr
 <br>
 
 <img src="https://streak-stats.demolab.com?user=eenock&theme=tokyonight&hide_border=true" />
+
+<br>
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=eenock&theme=tokyo-night&hide_border=true" width="97%" />
+
+</div>
+
+---
+
+## 🏅 Trophies
+
+<div align="center">
+
+<img src="https://github-profile-trophy.vercel.app/?username=eenock&theme=tokyonight&no-frame=true&row=1&column=7" />
 
 </div>
 
