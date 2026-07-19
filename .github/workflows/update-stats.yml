@@ -28,12 +28,16 @@ jobs:
             fi
           done
 
+      # NEW STEP: Clear any blocking directory or broken artifact named trophy.svg
+      - name: Clean conflicting files
+        run: rm -rf trophy.svg
+
       - name: Fetch trophies SVG
         uses: ryo-ma/github-profile-trophy@master
         with:
           username: eenock
           theme: tokyonight
-          token: ${{ secrets.GITHUB_TOKEN }} # Explicitly passes token as a valid action property
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Move Trophy file
         run: |
@@ -45,7 +49,7 @@ jobs:
       - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.email "github-actions[bot]@://github.com"
           git add assets/*.svg
           git diff --staged --quiet || git commit -m "chore: update profile stats"
           git push
