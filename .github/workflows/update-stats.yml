@@ -28,20 +28,13 @@ jobs:
             fi
           done
 
-      # REPLACED CURL ARRAY WITH NATIVE GITHUB ACTION TO BYPASS RATE LIMITS
       - name: Fetch trophies SVG
         uses: ryo-ma/github-profile-trophy@master
         with:
           username: eenock
-          # Custom arguments parsed directly from your URL string
           theme: tokyonight
-          column: 7
-          row: 1
-          no-frame: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }} # Explicitly passes token as a valid action property
 
-      # The action naturally saves to the root directory. We move it into assets/ for consistency.
       - name: Move Trophy file
         run: |
           mkdir -p assets
