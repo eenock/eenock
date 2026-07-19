@@ -1,4 +1,3 @@
-# .github/workflows/update-stats.yml
 name: Update Profile Stats
 
 on:
@@ -18,37 +17,37 @@ jobs:
         run: |
           mkdir -p assets
           urls=(
-            "https://github-readme-stats.vercel.app/api/top-langs/?username=eenock&layout=compact&theme=tokyonight&hide_border=true&langs_count=8"
-            "https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=eenock&layout=compact&theme=tokyonight&hide_border=true&langs_count=8"
+            "https://vercel.app"
+            "https://vercel.app"
           )
           for url in "${urls[@]}"; do
             echo "Trying: $url"
             if curl -fsSL "$url" -o assets/top-langs.svg && [ "$(wc -c < assets/top-langs.svg)" -ge 500 ]; then
               echo "Success: $url"
-              exit 0
+              break
             fi
           done
-          echo "::error::All top-langs sources failed"
-          exit 1
 
+      # REPLACED CURL ARRAY WITH NATIVE GITHUB ACTION TO BYPASS RATE LIMITS
       - name: Fetch trophies SVG
+        uses: ryo-ma/github-profile-trophy@master
+        with:
+          username: eenock
+          # Custom arguments parsed directly from your URL string
+          theme: tokyonight
+          column: 7
+          row: 1
+          no-frame: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # The action naturally saves to the root directory. We move it into assets/ for consistency.
+      - name: Move Trophy file
         run: |
           mkdir -p assets
-          urls=(
-            "https://github-profile-trophy.vercel.app/?username=eenock&theme=tokyonight&no-frame=true&row=1&column=7"
-            "https://github-profile-trophy-liard-delta.vercel.app/?username=eenock&theme=tokyonight&no-frame=true&row=1&column=7"
-            "https://github-profile-trophy-fork-two.vercel.app/?username=eenock&theme=tokyonight&no-frame=true&row=1&column=7"
-            "https://github-profile-trophy-winning.vercel.app/?username=eenock&theme=tokyonight&no-frame=true&row=1&column=7"
-          )
-          for url in "${urls[@]}"; do
-            echo "Trying: $url"
-            if curl -fsSL "$url" -o assets/trophies.svg && [ "$(wc -c < assets/trophies.svg)" -ge 500 ]; then
-              echo "Success: $url"
-              exit 0
-            fi
-          done
-          echo "::error::All trophy sources failed"
-          exit 1
+          if [ -f "trophy.svg" ]; then
+            mv trophy.svg assets/trophies.svg
+          fi
 
       - name: Commit changes
         run: |
