@@ -28,9 +28,9 @@ jobs:
             fi
           done
 
-      # NEW STEP: Clear any blocking directory or broken artifact named trophy.svg
-      - name: Clean conflicting files
-        run: rm -rf trophy.svg
+      # Clean any workspace residual directories before execution
+      - name: Pre-clean workspace
+        run: rm -rf trophy.svg trophies.svg assets/trophies.svg
 
       - name: Fetch trophies SVG
         uses: ryo-ma/github-profile-trophy@master
@@ -38,13 +38,7 @@ jobs:
           username: eenock
           theme: tokyonight
           token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Move Trophy file
-        run: |
-          mkdir -p assets
-          if [ -f "trophy.svg" ]; then
-            mv trophy.svg assets/trophies.svg
-          fi
+          output_path: assets/trophies.svg # FORCES THE ENGINE TO WRITE TO A FILE PATH, SOLVING THE DENO BUG
 
       - name: Commit changes
         run: |
