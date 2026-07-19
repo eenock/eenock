@@ -16,20 +16,39 @@ jobs:
 
       - name: Fetch top-langs SVG
         run: |
-          curl -fsSL --create-dirs "https://github-readme-stats.vercel.app/api/top-langs/?username=eenock&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" -o assets/top-langs.svg
+          mkdir -p assets
+          urls=(
+            "https://github-readme-stats.vercel.app/api/top-langs/?username=eenock&layout=compact&theme=tokyonight&hide_border=true&langs_count=8"
+            "https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=eenock&layout=compact&theme=tokyonight&hide_border=true&langs_count=8"
+          )
+          for url in "${urls[@]}"; do
+            echo "Trying: $url"
+            if curl -fsSL "$url" -o assets/top-langs.svg && [ "$(wc -c < assets/top-langs.svg)" -ge 500 ]; then
+              echo "Success: $url"
+              exit 0
+            fi
+          done
+          echo "::error::All top-langs sources failed"
+          exit 1
 
       - name: Fetch trophies SVG
         run: |
-          curl -fsSL --create-dirs "https://github-profile-trophy-liard-delta.vercel.app/?username=eenock&theme=tokyonight&no-frame=true&row=1&column=7" -o assets/trophies.svg
-
-      - name: Validate SVGs
-        run: |
-          for f in assets/top-langs.svg assets/trophies.svg; do
-            if [ "$(wc -c < "$f")" -lt 500 ]; then
-              echo "::error::$f is suspiciously small ($(wc -c < "$f") bytes) — likely an error response, not a real SVG"
-              exit 1
+          mkdir -p assets
+          urls=(
+            "https://github-profile-trophy.vercel.app/?username=eenock&theme=tokyonight&no-frame=true&row=1&column=7"
+            "https://github-profile-trophy-liard-delta.vercel.app/?username=eenock&theme=tokyonight&no-frame=true&row=1&column=7"
+            "https://github-profile-trophy-fork-two.vercel.app/?username=eenock&theme=tokyonight&no-frame=true&row=1&column=7"
+            "https://github-profile-trophy-winning.vercel.app/?username=eenock&theme=tokyonight&no-frame=true&row=1&column=7"
+          )
+          for url in "${urls[@]}"; do
+            echo "Trying: $url"
+            if curl -fsSL "$url" -o assets/trophies.svg && [ "$(wc -c < assets/trophies.svg)" -ge 500 ]; then
+              echo "Success: $url"
+              exit 0
             fi
           done
+          echo "::error::All trophy sources failed"
+          exit 1
 
       - name: Commit changes
         run: |
