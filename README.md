@@ -136,7 +136,7 @@ Production-grade multi-level feedback queue scheduling simulator with dynamic pr
 
 <img height="180em" src="https://github-readme-stats.vercel.app/api?username=eenock&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" />
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=eenock&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" />
+<img height="180em" src="./assets/top-langs.svg" />
 
 <br>
 
@@ -154,7 +154,7 @@ Production-grade multi-level feedback queue scheduling simulator with dynamic pr
 
 <div align="center">
 
-<img src="https://github-profile-trophy.vercel.app/?username=eenock&theme=tokyonight&no-frame=true&row=1&column=7" />
+<img src="./assets/trophies.svg" />
 
 </div>
 
