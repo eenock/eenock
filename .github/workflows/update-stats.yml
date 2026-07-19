@@ -16,11 +16,11 @@ jobs:
 
       - name: Fetch top-langs SVG
         run: |
-          curl -sSL "https://github-readme-stats.vercel.app/api/top-langs/?username=eenock&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" -o assets/top-langs.svg
+          curl -sSL --create-dirs "https://github-readme-stats.vercel.app/api/top-langs/?username=eenock&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" -o assets/top-langs.svg
 
       - name: Fetch trophies SVG
         run: |
-          curl -sSL "https://github-profile-trophy.vercel.app/?username=eenock&theme=tokyonight&no-frame=true&row=1&column=7" -o assets/trophies.svg
+          curl -sSL --create-dirs "https://github-profile-trophy.vercel.app/?username=eenock&theme=tokyonight&no-frame=true&row=1&column=7" -o assets/trophies.svg
 
       - name: Commit changes
         run: |
