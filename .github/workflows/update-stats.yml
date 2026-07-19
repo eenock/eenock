@@ -1,0 +1,31 @@
+# .github/workflows/update-stats.yml
+name: Update Profile Stats
+
+on:
+  schedule:
+    - cron: '0 0 * * *'   # daily
+  workflow_dispatch:
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch top-langs SVG
+        run: |
+          curl -sSL "https://github-readme-stats.vercel.app/api/top-langs/?username=eenock&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" -o assets/top-langs.svg
+
+      - name: Fetch trophies SVG
+        run: |
+          curl -sSL "https://github-profile-trophy.vercel.app/?username=eenock&theme=tokyonight&no-frame=true&row=1&column=7" -o assets/trophies.svg
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/*.svg
+          git diff --staged --quiet || git commit -m "chore: update profile stats"
+          git push
