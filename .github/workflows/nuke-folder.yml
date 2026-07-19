@@ -1,0 +1,40 @@
+name: Force Nuke Trophy Directory
+
+on:
+  workflow_dispatch: # Allows you to trigger this manually with a button click
+
+jobs:
+  nuke-it:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository with full history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Pulls all branches and tracking history
+
+      - name: Hard remove tracking directory
+        run: |
+          echo "=== Workspace status before cleaning ==="
+          ls -la
+          
+          # Force remove any directory tracking or file layers from git
+          git rm -rf --cached trophy.svg || true
+          rm -rf trophy.svg
+          
+          echo "=== Workspace status after cleaning ==="
+          ls -la
+
+      - name: Force Commit and Push clean state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Check if there are changes to push, if so, force push it out
+          if ! git diff --staged --quiet; then
+            git commit -m "fix: hard purge corrupted trophy directory tracking"
+            git push origin HEAD:${{ github.ref }} --force
+          else
+            echo "No hidden tracking found on this branch level."
+          fi
