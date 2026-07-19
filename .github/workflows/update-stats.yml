@@ -16,11 +16,20 @@ jobs:
 
       - name: Fetch top-langs SVG
         run: |
-          curl -sSL --create-dirs "https://github-readme-stats.vercel.app/api/top-langs/?username=eenock&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" -o assets/top-langs.svg
+          curl -fsSL --create-dirs "https://github-readme-stats.vercel.app/api/top-langs/?username=eenock&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" -o assets/top-langs.svg
 
       - name: Fetch trophies SVG
         run: |
-          curl -sSL --create-dirs "https://github-profile-trophy.vercel.app/?username=eenock&theme=tokyonight&no-frame=true&row=1&column=7" -o assets/trophies.svg
+          curl -fsSL --create-dirs "https://github-profile-trophy-liard-delta.vercel.app/?username=eenock&theme=tokyonight&no-frame=true&row=1&column=7" -o assets/trophies.svg
+
+      - name: Validate SVGs
+        run: |
+          for f in assets/top-langs.svg assets/trophies.svg; do
+            if [ "$(wc -c < "$f")" -lt 500 ]; then
+              echo "::error::$f is suspiciously small ($(wc -c < "$f") bytes) — likely an error response, not a real SVG"
+              exit 1
+            fi
+          done
 
       - name: Commit changes
         run: |
