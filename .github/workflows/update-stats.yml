@@ -11,6 +11,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Fetch stats card SVG
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          options: username=eenock&show_icons=true&count_private=true&include_all_commits=true&theme=tokyonight
+          path: assets/stats.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Fetch top-langs SVG
         uses: stats-organization/github-readme-stats-action@v2
         with:
