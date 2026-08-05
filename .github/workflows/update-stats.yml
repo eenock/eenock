@@ -3,6 +3,9 @@ on:
   schedule:
     - cron: '0 0 * * *'   # daily
   workflow_dispatch:
+concurrency:
+  group: update-profile-stats
+  cancel-in-progress: true
 jobs:
   update-stats:
     runs-on: ubuntu-latest
@@ -10,7 +13,6 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
-
       - name: Fetch stats card SVG
         uses: stats-organization/github-readme-stats-action@v2
         with:
@@ -18,7 +20,6 @@ jobs:
           options: username=eenock&show_icons=true&count_private=true&include_all_commits=true&theme=tokyonight
           path: assets/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Fetch top-langs SVG
         uses: stats-organization/github-readme-stats-action@v2
         with:
@@ -26,11 +27,9 @@ jobs:
           options: username=eenock&layout=compact&theme=tokyonight&langs_count=8
           path: assets/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-
       # Clean any workspace residual directories before execution
       - name: Pre-clean workspace
         run: rm -rf trophy.svg trophies.svg assets/trophies.svg
-
       - name: Fetch trophies SVG
         uses: ryo-ma/github-profile-trophy@master
         with:
@@ -38,11 +37,11 @@ jobs:
           theme: tokyonight
           token: ${{ secrets.GITHUB_TOKEN }}
           output_path: assets/trophies.svg
-
       - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add assets/*.svg
           git diff --staged --quiet || git commit -m "chore: update profile stats"
+          git pull --rebase origin main
           git push
