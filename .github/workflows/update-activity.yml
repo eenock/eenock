@@ -19,14 +19,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Dynamically inject missing end marker into README inside runner only
+      # Inject missing end marker on runner only, no manual edit of your source README
       - name: Inject missing RECENT_ACTIVITY:end marker
         run: |
           sed -i '/<!--RECENT_ACTIVITY:last_update-->/a\<!--RECENT_ACTIVITY:end-->' README.md
 
       - name: Update recent activity
-        uses: Readme-Workflows/recent-activity@v2.5.0
+        uses: Readme-Workflows/recent-activity@v2.4.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
         with:
           config_path: ""
