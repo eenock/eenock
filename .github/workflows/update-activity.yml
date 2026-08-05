@@ -3,11 +3,14 @@ on:
   schedule:
     - cron: "0 */6 * * *"
   workflow_dispatch:
+
 permissions:
   contents: write
+
 concurrency:
   group: update-profile-readme
   cancel-in-progress: true
+
 jobs:
   update-readme:
     runs-on: ubuntu-latest
@@ -15,7 +18,15 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      # Dynamically inject missing end marker into README inside runner only
+      - name: Inject missing RECENT_ACTIVITY:end marker
+        run: |
+          sed -i '/<!--RECENT_ACTIVITY:last_update-->/a\<!--RECENT_ACTIVITY:end-->' README.md
+
       - name: Update recent activity
-        uses: Readme-Workflows/recent-activity@v2.4.1
+        uses: Readme-Workflows/recent-activity@v2.5.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          config_path: ""
