@@ -19,10 +19,21 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Inject missing end marker on runner only, no manual edit of your source README
+      # Fix sed for Ubuntu GitHub runner: inject missing end marker
       - name: Inject missing RECENT_ACTIVITY:end marker
         run: |
-          sed -i '/<!--RECENT_ACTIVITY:last_update-->/a\<!--RECENT_ACTIVITY:end-->' README.md
+          sed -i'' '/<!--RECENT_ACTIVITY:last_update-->/a\<!--RECENT_ACTIVITY:end-->' README.md
+
+      # Create temporary dummy config file inside runner only (not committed)
+      - name: Create dummy config file
+        run: |
+          mkdir -p .github
+          cat > .github/recent-activity.config.yml << 'EOF'
+exclude:
+  types:
+    - PushEvent
+max_lines: 12
+EOF
 
       - name: Update recent activity
         uses: Readme-Workflows/recent-activity@v2.4.1
@@ -30,4 +41,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
         with:
-          config_path: ""
+          CONFIG_FILE: .github/recent-activity.config.yml
