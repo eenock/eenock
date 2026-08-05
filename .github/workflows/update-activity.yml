@@ -1,4 +1,4 @@
-name: Update Recent Activity
+name: Recent Activity
 
 on:
   schedule:
@@ -18,10 +18,10 @@ jobs:
     timeout-minutes: 10
 
     steps:
-      - name: Check out profile repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Update recent GitHub activity
+      - name: Update recent activity
         uses: Readme-Workflows/recent-activity@v2.4.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
