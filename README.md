@@ -27,13 +27,13 @@ University of Electronic Science and Technology of China (UESTC), Chengdu 🇨�
 ## 👨‍💻 About Me
 > I research **secure, privacy-preserving machine learning systems**, focused on Byzantine-robust federated learning for network intrusion detection. My work combines trust-aware aggregation with differential privacy to keep distributed models resilient against malicious participants without sacrificing data privacy.
 >
-> Outside research, I build full-stack applications with **Next.js, TypeScript, and Python**, mostly at the intersection of education, AI, and cybersecurity. I also lean into **vibe coding** — pairing AI copilots (Claude Code, Cursor) with strong engineering judgment to ship faster without cutting corners on quality.
+> Outside research, I build full-stack applications with **Next.js, TypeScript, and Python**, mostly at the intersection of education, AI, and cybersecurity — increasingly through **vibe coding**, pairing AI copilots with strong engineering judgment to ship faster without cutting corners on quality.
 ### 🎯 Current Focus
 | 🔬 Byzantine-Robust Federated Learning | 🛡️ Network Intrusion Detection Systems |
 | --- | --- |
 | 🤖 Applied Machine Learning & AI Security | 🌐 Full-Stack Development with Next.js |
 | 📚 Distributed Systems | 🔐 Privacy-Preserving AI |
-| ⚡ Vibe Coding / AI-Assisted Development | 🧩 Rapid Prototyping with LLM Tooling |
+| ⚡ AI-Assisted Development (Vibe Coding) | 🧩 Rapid Prototyping with LLM Tooling |
 
 ![](https://capsule-render.vercel.app/api?type=rect&color=0A66C2&height=3&section=header)
 ## 🔬 Research & Selected Projects
@@ -108,19 +108,18 @@ Bachelor's thesis project. Sentiment-driven stock prediction using FinBERT, VADE
 - 🌍 **President**, Uganda Students' Association in China (2026/27)
 - 📈 Built financial sentiment models on **1.8M+ headlines** using FinBERT and LSTM
 - 🌐 Shipped **multiple full-stack platforms** end to end, from data layer to UI
-- ⚡ Actively **vibe coding** — shipping with AI pair-programming tools while keeping code production-grade
 
 ![](https://capsule-render.vercel.app/api?type=rect&color=0A66C2&height=3&section=header)
 ## 🛠️ Technologies
 
 **Languages**
 ![](https://skillicons.dev/icons?i=python,typescript,javascript)
+
 **Frameworks & Tools**
 ![](https://skillicons.dev/icons?i=nextjs,react,nodejs,django,pytorch,mongodb,git,docker,linux)
-**AI-Assisted / Vibe Coding**
-![](https://img.shields.io/badge/Claude_Code-D97757?style=flat-square&logo=anthropic&logoColor=white)
-![](https://img.shields.io/badge/Cursor-000000?style=flat-square&logo=cursor&logoColor=white)
-![](https://img.shields.io/badge/GitHub_Copilot-000000?style=flat-square&logo=githubcopilot&logoColor=white)
+
+**AI-Assisted Workflow**
+`Claude Code` · `Cursor` · `GitHub Copilot`
 
 ![](https://capsule-render.vercel.app/api?type=rect&color=0A66C2&height=3&section=header)
 ## 📈 GitHub Statistics
